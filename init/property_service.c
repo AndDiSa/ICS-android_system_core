@@ -58,7 +58,7 @@ struct {
     unsigned int uid;
     unsigned int gid;
 } property_perms[] = {
-    { "net.rmnet0.",      AID_RADIO,    0 },
+    { "net.rmnet",        AID_RADIO,    0 },
     { "net.gprs.",        AID_RADIO,    0 },
     { "net.ppp",          AID_RADIO,    0 },
     { "net.qmi",          AID_RADIO,    0 },
@@ -75,6 +75,7 @@ struct {
     { "hw.",              AID_SYSTEM,   0 },
     { "sys.",             AID_SYSTEM,   0 },
     { "service.",         AID_SYSTEM,   0 },
+    { "service.",         AID_RADIO,    0 },
     { "wlan.",            AID_SYSTEM,   0 },
     { "dhcp.",            AID_SYSTEM,   0 },
     { "dhcp.",            AID_DHCP,     0 },
@@ -84,7 +85,8 @@ struct {
     { "service.adb.tcp.port", AID_SHELL,    0 },
     { "persist.sys.",     AID_SYSTEM,   0 },
     { "persist.service.", AID_SYSTEM,   0 },
-    { "persist.security.", AID_SYSTEM,   0 },
+    { "persist.service.", AID_RADIO,    0 },
+    { "persist.security.",AID_SYSTEM,   0 },
     { "net.pdp0",         AID_RADIO,    AID_RADIO },
     { "net.pdp1",         AID_RADIO,    AID_RADIO },
     { "net.pdp2",         AID_RADIO,    AID_RADIO },
