@@ -105,6 +105,9 @@ on post-fs
     # once everything is setup, no need to modify /
     mount rootfs rootfs / ro remount
 
+    # Mount compressed filesystems
+    mount squashfs loop@/system/lib/modules/modules.sqf /system/lib/modules ro
+
     # We chown/chmod /cache again so because mount is run as root + defaults
     chown system cache /cache
     chmod 0771 /cache
